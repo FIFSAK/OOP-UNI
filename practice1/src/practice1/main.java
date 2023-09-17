@@ -66,7 +66,8 @@ public class main {
 	public static void main(String[] args){
 		Scanner input = new Scanner(System.in);
 		main obj = new main();
-//		obj.square(input.nextInt());
+		System.out.println(":ASDASDAD");
+		//		obj.square(input.nextInt());
 //		System.out.println(obj.grade(input.nextInt()));
 //		
 //	    double a = input.nextDouble();
