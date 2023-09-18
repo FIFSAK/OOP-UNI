@@ -25,7 +25,18 @@ public class Time {
 		}
 	}
 	public String universal() {
-		return "";
+		return hour + " " + minute + " " + second;
+	}
+	public String standard() {
+		if (hour>12) {
+			return hour-12 + " " + minute + " " + second + " pm";
+		}
+		else {
+			return hour + " " + minute + " " + second + " am";
+		}
+	}
+	public String add(Time t) {
+		return this.hour + t.hour + " " + this.minute + t.minute + " " + this.second + t.second;
 	}
 //	private boolean timeValid(int num) {
 //		

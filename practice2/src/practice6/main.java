@@ -1,4 +1,4 @@
-package practice2;
+package practice6;
 
 public class main {
 
