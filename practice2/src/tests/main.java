@@ -1,4 +1,4 @@
-package practice6;
+package tests;
 
 public class main {
 

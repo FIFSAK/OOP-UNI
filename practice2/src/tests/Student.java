@@ -1,4 +1,4 @@
-package practice6;
+package tests;
 
 public class Student {
 	private String name;
@@ -15,3 +15,4 @@ public class Student {
 		System.out.println(b.name);
 		}
 }
+
