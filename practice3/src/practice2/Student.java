@@ -1,4 +1,4 @@
-package practice3;
+package practice2;
 
 class Student {
 	private int id;
