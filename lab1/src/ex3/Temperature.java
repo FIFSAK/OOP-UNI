@@ -49,7 +49,7 @@ public class Temperature {
 //	public double getVal() {
 //		return val;
 //	}
-	public char getScale(char scale) {
+	public char getScale() {
 		return scale;
 	}
 	

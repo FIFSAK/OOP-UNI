@@ -9,7 +9,7 @@ public class Card {
 	{
 		cvc++;
 	}
-	Card(Colors color, String name){
+	public Card(Colors color, String name){
 		this.color = color;
 		this.name = name;
 	}
