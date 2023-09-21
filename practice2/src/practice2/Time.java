@@ -28,7 +28,7 @@ public class Time {
 		return hour + " " + minute + " " + second;
 	}
 	public String standard() {
-		if (hour>12) {
+		if (hour>12 & hour==0) {
 			return hour-12 + " " + minute + " " + second + " pm";
 		}
 		else {
@@ -36,9 +36,25 @@ public class Time {
 		}
 	}
 	public String add(Time t) {
-		return this.hour + t.hour + " " + this.minute + t.minute + " " + this.second + t.second;
+	    int newSecond = this.second + t.second;
+	    int newMinute = this.minute + t.minute;
+	    int newHour = this.hour + t.hour;
+
+	    if (newSecond > 59) {
+	        newMinute += newSecond / 60;
+	        newSecond %= 60;
+	    }
+
+	    if (newMinute > 59) {
+	        newHour += newMinute / 60;
+	        newMinute %= 60;
+	    }
+
+	    if (newHour > 23) {
+	        newHour %= 24;
+	    }
+
+	    return newHour + " " + newMinute + " " + newSecond;
 	}
-//	private boolean timeValid(int num) {
-//		
-//	}
+
 }
