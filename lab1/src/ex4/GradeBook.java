@@ -20,27 +20,23 @@ public class GradeBook {
 	}
 	public GradeBook(Student student, Course course) {
 		this.course = course;
-		students.add(student);
-		if (student.getGrade()>max) {
-			max = student.getGrade();
-			maxName = student.getName();
-		}
-		if (student.getGrade()<min) {
-			min = student.getGrade();
-			minName = student.getName();
-		} 
+	    students.add(student);
+	    updateMinMax(student);
+	}
+	private void updateMinMax(Student student) {
+	    if (student.getGrade() > max) {
+	        max = student.getGrade();
+	        maxName = student.getName();
+	    }
+	    if (student.getGrade() < min) {
+	        min = student.getGrade();
+	        minName = student.getName();
+	    }
 	}
 	public void addStudent(int id, String name) {
 		Student s = new Student(id, name);
-		students.add(s);
-		if (s.getGrade()>max) {
-			max = s.getGrade();
-			maxName = s.getName();
-		}
-		if (s.getGrade()<min) {
-			min = s.getGrade();
-			minName = s.getName();
-		} 
+	    students.add(s);
+	    
 	}
 	public String displayMessage() {
 		return "Welcome to the grade book for CS101 "
@@ -63,6 +59,10 @@ public class GradeBook {
 	}
 	public void setGrade(int grade, int i) {
 		Student s = students.get(i);
-		s.setGrade(grade);
+	    s.setGrade(grade);
+	    updateMinMax(s);
+	}
+	public Vector<Student> getStudents() {
+		return students;
 	}
 }
