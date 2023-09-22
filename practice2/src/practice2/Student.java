@@ -1,12 +1,17 @@
 package practice2;
 
-class Student {
+public class Student {
 	private int id;
+	private int grade;
 	String name;
-	int year_of_study;
+	int year_of_study = 1;
 	public Student(int id, String name) {
 		this.id = id;
 		this.name = name;
+	}
+	public Student(int id, String name, int grade) {
+		this(id, name);
+		this.grade = grade;
 	}
 	public void setId(int id) {
 		this.id = id;
@@ -23,7 +28,13 @@ class Student {
 	public void incrYear() {
 		year_of_study++;
 	}
-//	public String to_string() {
-//		return this.id + " " + this.name + " " this.year_of_study;
-//	}
+	public int getGrade() {
+		return grade;
+	}
+	public void setGrade(int grade) {
+		this.grade = grade;
+	}
+	public String toString() {
+		return id + " " + name + " " + grade + " " + year_of_study;
+	}
 }
