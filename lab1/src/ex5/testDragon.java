@@ -9,7 +9,7 @@ public class testDragon {
 		DragonLaunch.kidnap(new Person("B"));
 		DragonLaunch.kidnap(new Person("B"));
 		DragonLaunch.kidnap(new Person("G"));
-		DragonLaunch.kidnap(new Person("B"));
+		DragonLaunch.kidnap(new Person("G"));
 		System.out.println(DragonLaunch.willDragonEarOrNot());
 	}
 
