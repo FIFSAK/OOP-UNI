@@ -12,11 +12,8 @@ public class testGradeBook {
 	    // Count the number of students in each grade range
 	    for (Student student : book.getStudents()) {
 	        int grade = student.getGrade();
-	        if (grade == 100) {
-	            gradeCounts[10]++;
-	        } else {
-	            gradeCounts[grade / 10]++;
-	        }
+	        gradeCounts[grade / 10]++;
+	   
 	    }
 
 	    // Print the distribution
@@ -48,12 +45,13 @@ public class testGradeBook {
 		book.addStudent(6, "Fnuar");
 		
 		for(int i = 0; i<6;i++) {
+			String temp = "Student  " + book.getStudent(i) + ": ";
+			System.out.print(temp);
 			grade = input.nextInt();
 			book.setGrade(grade, i);
+//			System.out.print("");
 		}
-		System.out.println(book);
 		System.out.println(book.displayGradeReport());
-		System.out.println("grades distribution");
 		printGradeDistribution(book);
 	}
 

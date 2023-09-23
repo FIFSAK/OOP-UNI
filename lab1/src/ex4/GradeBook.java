@@ -42,17 +42,17 @@ public class GradeBook {
 		return "Welcome to the grade book for CS101 "
 				+ course.getName();
 	}
-	public double averageGrade() {
+	public String averageGrade() {
 		double sumGrade = 0;
 		for(Student cur: students) {
 			sumGrade += cur.getGrade();
 		}
 		double average = sumGrade/students.size();
-		return average;
+		return String.format("%.2f", average);
 	}
 	public String displayGradeReport() {
 		
-		return "Class average is " + averageGrade() + ". Lowest grade is " + min + minName + ". Highest grade is " + max + maxName;
+		return "Class average is " + averageGrade() + ". Lowest grade is " + min + " " + minName + ". Highest grade is " + max + " " + maxName;
 	}
 	public String toString() {
 		return students.toString() + course.toString();
@@ -64,5 +64,9 @@ public class GradeBook {
 	}
 	public Vector<Student> getStudents() {
 		return students;
+	}
+	public String getStudent(int i) {
+		return students.get(i).getName();
+		
 	}
 }
