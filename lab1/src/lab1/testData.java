@@ -14,6 +14,7 @@ public class testData {
 		}
 		System.out.println(Analyzer.average(num.getNum(),num.getIter()));
 		System.out.println(Analyzer.max(num.maxValue()));
+		input.close();
 	}
 
 }
