@@ -1,9 +1,12 @@
 package problem2;
-
+import java.util.Vector;
 public class Person {
 	public String name;
 	public String address;
-	
+	public static Vector <Person> persons = new Vector<Person>();
+	{
+		persons.add(this);
+	}
 	public Person() {}
 
 	public Person(String name, String address) {
