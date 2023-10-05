@@ -1,7 +1,7 @@
 package ex2;
 
 public class Card {
-	static final private String material = "plastic";
+	private static final String material = "plastic";
 	private int cvc; //will read only
 	public String name;
 	public Colors color = Colors.BLACK;
