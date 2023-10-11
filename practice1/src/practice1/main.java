@@ -62,13 +62,12 @@ public class main {
 		for(int i = s.length()-1;i>-1;i--) {
 			s2+=charArray[i];
 		}
-		System.out.println(s==s2);
+		System.out.println(s.equals(s2));
 	}
 	public static void main(String[] args){
 		Scanner input = new Scanner(System.in);
 		main obj = new main();
-//		System.out.println();
-		obj.polindrom("asasa");
+		System.out.println(":ASDASDAD");
 		//		obj.square(input.nextInt());
 //		System.out.println(obj.grade(input.nextInt()));
 //		
