@@ -1,4 +1,4 @@
-package lectask;
+package practice4;
 
 public abstract class Shape {
 	Color color;
