@@ -15,7 +15,7 @@ public class Triangle extends Shape {
 			System.err.println(space + "/_\\");
 		}
 		else {
-			System.err.println(space + "/_\\");
+			System.out.println(space + "/_\\");
 		}
 	}
 }

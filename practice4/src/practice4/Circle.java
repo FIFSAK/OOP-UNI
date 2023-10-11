@@ -16,7 +16,7 @@ public class Circle extends Shape{
 			System.err.println(space + "()");
 		}
 		else {
-			System.err.println(space + "()");
+			System.out.println(space + "()");
 		}
 	}
 }
