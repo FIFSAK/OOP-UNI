@@ -4,7 +4,19 @@ import java.util.Objects;
 
 public class Student extends Person {
 	String uni;
+	
+	
+	public Student() {
+		// TODO Auto-generated constructor stub
+	}
 
+	public Student(int age, String name, String uni) {
+		super(age, name);
+		this.uni = uni;
+		// TODO Auto-generated constructor stub
+	}
+	
+	
 	@Override
 	public String toString() {
 		return "Student [uni=" + uni + super.toString();
@@ -12,10 +24,8 @@ public class Student extends Person {
 
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = super.hashCode();
-		result = prime * result + Objects.hash(uni);
-		return result;
+//		return super.hashCode() + Objects.hash(uni);
+		return Objects.hash(name, age, uni);
 	}
 
 	@Override
