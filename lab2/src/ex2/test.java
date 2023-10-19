@@ -14,18 +14,19 @@ public class test {
         Student student2 = new Student(20, "Alice", "MIT");
         Student student3 = new Student(21, "Bob", "Harvard");
         
-        HashSet<Person> set = new HashSet<>();
+        HashSet<Person> hset = new HashSet<>();
         
         // Adding objects to HashSet
-        set.add(person1);
-        set.add(person2);  // duplicate
-        set.add(person3);
-        set.add(student1);
-        set.add(student2);  // duplicate
-        set.add(student3);
+        hset.add(person1);
+        hset.add(person2);  // duplicate
+        hset.add(person3);
+        hset.add(student1);
+        hset.add(student2);  // duplicate
+        hset.add(student3);
         
         // Checking the size of HashSet
-        System.out.println(set);  // It should be 4 as two entries are duplicates
+        System.out.println(hset);  // It should be 4 as two entries are duplicates
+        System.out.println(person1.equals(person2));
 
         	
 	}
