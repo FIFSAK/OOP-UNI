@@ -22,7 +22,7 @@ public class King extends Piece {
             int newX = pos.x + move[0];
             int newY = pos.y + move[1];
 
-            if (newX >= 61 && newX <= 68 && newY >= 1 && newY <= 8) {
+            if (newX >= 1 && newX <= 8 && newY >= 1 && newY <= 8) {
                 legalPos.add(new Position(newX, newY));
             }
         }

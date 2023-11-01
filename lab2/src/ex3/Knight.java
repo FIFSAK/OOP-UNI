@@ -16,15 +16,13 @@ public class Knight extends Piece{
 			            {1, -2}, {1, 2}, {2, -1}, {2, 1}
 			        };
 
-			        for (int[] move : knightMoves) {
-			            int newX = pos.x + move[0];
-			            int newY = pos.y + move[1];
-
-			            // Ensure the new position is within the board boundaries
-			            if (newX >= 61 && newX <= 68 && newY >= 1 && newY <= 8) {
-			                legalPos.add(new Position(newX, newY));
-			            }
-			        }
+			 for (int[] move : knightMoves) {
+				 int newX = pos.x + move[0];
+				 int newY = pos.y + move[1];
+			     if (newX >= 1 && newX <= 8 && newY >= 1 && newY <= 8) {
+			    	 legalPos.add(new Position(newX, newY));
+			     }
+			 }
 		}
 		
 		@Override
