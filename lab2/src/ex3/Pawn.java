@@ -12,18 +12,14 @@ public class Pawn extends Piece {
 	
 	public void fillPos() {
 		if (pos.y == 2) {
-			legalPos.add(new Position(pos.ch, pos.y+2));
+			legalPos.add(new Position(pos.x, pos.y+2));
 		}
-		legalPos.add(new Position(pos.ch, pos.y+1));
+		legalPos.add(new Position(pos.x, pos.y+1));
 	}
 	
 	
 	@Override
 	public boolean isLegalMove(Position b) {
-		// TODO Auto-generated method stub
-		return super.isLegalMove(b);
-	}
-	
-	
-	
+		return super.isLegalMove(b);	
+		}
 }

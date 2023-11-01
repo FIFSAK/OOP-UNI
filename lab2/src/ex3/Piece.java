@@ -14,9 +14,6 @@ public abstract class Piece {
 	}
 	
 	public boolean isLegalMove(Position b) {
-		if (legalPos.contains(b)) {
-			return true;
-		}
-		return false;
+		return legalPos.contains(b);
 	}
 }

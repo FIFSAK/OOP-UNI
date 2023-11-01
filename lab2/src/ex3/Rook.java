@@ -12,10 +12,10 @@ public class Rook extends Piece{
 	public void fillPos() {
 		for(int i = 1;i<9;i++) {
 			if (i!= pos.y){		
-				legalPos.add(new Position(pos.ch, i));			
+				legalPos.add(new Position(pos.x, i));			
 			}
 		}
-		for(int i = 61; i < 69;i++) {
+		for(int i = 1; i < 9;i++) {
 			if(i!=pos.x) {
 				legalPos.add(new Position(i, pos.y));
 			}
