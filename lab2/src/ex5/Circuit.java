@@ -1,6 +1,6 @@
 package ex5;
 
-public abstract class Curcuit {
+public abstract class Circuit {
 
 	public abstract double getResistance();
 	public abstract double getPotentialDiff();

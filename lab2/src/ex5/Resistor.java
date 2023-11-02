@@ -1,6 +1,6 @@
 package ex5;
 
-public class Resistor extends Curcuit{
+public class Resistor extends Circuit{
 	double r;
 	private double v;
 	public Resistor() {};
