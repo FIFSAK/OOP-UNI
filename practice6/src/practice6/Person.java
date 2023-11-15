@@ -1,6 +1,6 @@
 package practice6;
 
-public class Person implements CanHavePizza {
+public class Person implements CanHavePizza, Thanksgiving{
 
 	@Override
 	public void eatPizza() {
@@ -10,6 +10,12 @@ public class Person implements CanHavePizza {
 	
 	public boolean pay() {
 		return true;
+	}
+
+	@Override
+	public String thanks() {
+		// TODO Auto-generated method stub
+		return "thank you";
 	}
 	
 }
