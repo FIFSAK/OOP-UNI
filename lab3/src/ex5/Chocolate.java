@@ -18,4 +18,7 @@ public class Chocolate implements Comparable<Chocolate>{
 		return 0;
 	}
 	
+	public String toString() {
+		return name+ " " + weight;
+	}
 }
