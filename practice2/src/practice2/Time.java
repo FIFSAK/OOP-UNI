@@ -1,6 +1,6 @@
 package practice2;
 
-public class Time {
+public class Time implements Comparable<Time>{
 	int hour;
 	int minute;
 	int second;
@@ -55,6 +55,17 @@ public class Time {
 	    }
 
 	    return newHour + " " + newMinute + " " + newSecond;
+	}
+	@Override
+	public int compareTo(Time o) {
+		if(this.hour>o.hour) return 1;
+		if(this.hour<o.hour) return -1;
+		if(this.minute>o.minute) return 1;
+		if(this.minute<o.minute) return -1;
+		if(this.second>o.second) return 1;
+		if(this.second<o.second) return -1;
+		
+		return 0;
 	}
 
 }
