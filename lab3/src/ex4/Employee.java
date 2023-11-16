@@ -3,7 +3,7 @@ package ex4;
 import java.util.Date;
 import java.util.Objects;
 
-public class Employee extends Person {
+public class Employee extends Person implements Comparable<Employee>, Cloneable {
 	double salary;
 	Date hireDate;
 	String insuranceNumber;
@@ -53,6 +53,19 @@ public class Employee extends Person {
 	@Override
 	public String toString() {
 		return super.toString() + "[salary=" + salary + ", hireDate=" + hireDate + ", insuranceNumber=" + insuranceNumber + "]";
+	}
+
+	@Override
+	public int compareTo(Employee o) {
+		if(this.salary>o.salary) return 1;
+		if(this.salary<o.salary) return -1;
+		return 0;
+	}
+	
+	public Object clone() throws CloneNotSupportedException{
+		Employee e = (Employee)super.clone();
+		e.hireDate = (Date)hireDate.clone();
+		return e;
 	}
 	
 }
